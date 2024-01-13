@@ -1,0 +1,109 @@
+---
+# Linux Guests
+- name: al8-1
+  box: almalinux/8
+  aliases:
+    - al8-1.example.tld
+- name: al8-2
+  box: almalinux/8
+  aliases:
+    - al8-2.example.tld
+- name: al9-1
+  box: almalinux/9
+  aliases:
+    - al9-1.example.tld
+- name: al9-2
+  box: almalinux/9
+  aliases:
+    - al9-2.example.tld
+- name: us2004-1
+  box: generic/ubuntu2004
+  aliases:
+    - us2004-1.example.tld
+- name: us2004-2
+  box: generic/ubuntu2004
+  aliases:
+    - us2004-2.example.tld
+- name: us2204-1
+  box: generic/ubuntu2204
+  aliases:
+    - us2204-1.example.tld
+- name: us2204-2
+  box: generic/ubuntu2204
+  aliases:
+    - us2204-2.example.tld
+
+# Windows Guests
+- name: ws2019-1
+  box: peru/windows-server-2019-standard-x64-eval
+  aliases:
+    - ws2019-1.example.tld
+  guest: windows
+  ip: 10.0.0.10
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: install_netframework
+      args:
+        - 48
+    - name: install_chocolatey
+    - name: install_python
+
+- name: ws2019-2
+  box: peru/windows-server-2019-standard-x64-eval
+  aliases:
+    - ws2019-2.example.tld
+  guest: windows
+  ip: 10.0.0.11
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: install_netframework
+      args:
+        - 48
+    - name: install_chocolatey
+    - name: install_python
+
+- name: ws2022-1
+  box: peru/windows-server-2022-standard-x64-eval
+  aliases:
+    - ws2022-1.example.tld
+  guest: windows
+  ip: 10.0.0.12
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: install_chocolatey
+    - name: install_python
+
+- name: ws2022-2
+  box: peru/windows-server-2022-standard-x64-eval
+  aliases:
+    - ws2022-2.example.tld
+  guest: windows
+  ip: 10.0.0.13
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: install_chocolatey
+    - name: install_python

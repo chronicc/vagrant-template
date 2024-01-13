@@ -1,0 +1,6 @@
+*
+!.gitignore
+!README.md
+!vagrant_extensions/
+!vagrant_extensions/**/*
+!Vagrantfile

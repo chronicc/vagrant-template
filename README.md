@@ -51,3 +51,7 @@ Provisioner arguments must be provided as a list of strings in the order describ
 - `install_netframework`: Install .NET Framework. Args: `version`
 - `install_python`: Install python 3.
 - `reboot`: Reboot the node.
+
+## License
+
+MIT

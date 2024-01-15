@@ -61,6 +61,14 @@ class Windows
       type: "shell"
   end
 
+  def self.enable_winrm_credssp(config)
+    config.vm.provision "enable_winrm_credssp",
+      inline: "Enable-WSManCredSSP -Role 'Server' -Force",
+      privileged: true,
+      run: "once",
+      type: "shell"
+  end
+
   def self.reboot(config)
     config.vm.provision "reboot",
       inline: "",

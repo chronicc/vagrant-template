@@ -48,6 +48,7 @@
       args:
         - "automata"
         - "Aut0mata!"
+    - name: enable_winrm_credssp
     - name: install_netframework
       args:
         - 48
@@ -68,6 +69,7 @@
       args:
         - "automata"
         - "Aut0mata!"
+    - name: enable_winrm_credssp
     - name: install_netframework
       args:
         - 48
@@ -88,6 +90,7 @@
       args:
         - "automata"
         - "Aut0mata!"
+    - name: enable_winrm_credssp
     - name: install_chocolatey
     - name: install_python
 
@@ -105,5 +108,6 @@
       args:
         - "automata"
         - "Aut0mata!"
+    - name: enable_winrm_credssp
     - name: install_chocolatey
     - name: install_python

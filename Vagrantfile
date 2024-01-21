@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
         n.hostmanager.aliases = node["aliases"]
       end
 
-      if node["guest"] == "linux"
+      if node["guest"] == "linux" || node["guest"] == nil
         Linux.root_ssh_key n, ENV["VAGRANT_SSH_KEY"] || "~/.ssh/id_rsa.pub"
       end
 

@@ -28,6 +28,10 @@ You can set a global amount of resources which is used for every node. Possible 
 - `VAGRANT_VM_CPUS`: The number of cpus. Defaults to 4.
 - `VAGRANT_VM_MEMORY`: The amount of memory in MB. Defaults to 4096.
 
+### Dissable Checkpoint
+
+- `VAGRANT_CHECKPOINT_DISABLE`: If this is set to `true`, Vagrant will not check if there is a newer version of itself available.
+
 ## Nodes configuration
 
 - `aliases`: A list of aliases for the node. These aliases can be used to connect to the node via ssh.

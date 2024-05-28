@@ -1,6 +1,8 @@
 *
 !.gitignore
 !.rubocop.yml
+!docs/
+!docs/**/*
 !Gemfile
 !LICENSE
 !README.md

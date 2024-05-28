@@ -42,12 +42,64 @@
 #   Windows Guests
 #
 # ---------------------------------------------------------------------------------------
+- name: ws2016-1
+  box: peru/windows-server-2016-standard-x64-eval
+  aliases:
+    - ws2016-1.example.tld
+  guest: windows
+  ip: 10.0.16.11
+  netmask: 255.255.0.0
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: enable_winrm_credssp
+
+- name: ws2016-2
+  box: peru/windows-server-2016-standard-x64-eval
+  aliases:
+    - ws2016-2.example.tld
+  guest: windows
+  ip: 10.0.16.12
+  netmask: 255.255.0.0
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: enable_winrm_credssp
+
+- name: ws2016-3
+  box: peru/windows-server-2016-standard-x64-eval
+  aliases:
+    - ws2016-3.example.tld
+  guest: windows
+  ip: 10.0.16.13
+  netmask: 255.255.0.0
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: enable_winrm_credssp
+
 - name: ws2019-1
   box: peru/windows-server-2019-standard-x64-eval
   aliases:
     - ws2019-1.example.tld
   guest: windows
-  ip: 10.0.0.10
+  ip: 10.0.19.11
+  netmask: 255.255.0.0
   provisioners:
     - name: change_admin_pass
       args:
@@ -60,15 +112,14 @@
     - name: install_netframework
       args:
         - 48
-    - name: install_chocolatey
-    - name: install_python
 
 - name: ws2019-2
   box: peru/windows-server-2019-standard-x64-eval
   aliases:
     - ws2019-2.example.tld
   guest: windows
-  ip: 10.0.0.11
+  ip: 10.0.19.12
+  netmask: 255.255.0.0
   provisioners:
     - name: change_admin_pass
       args:
@@ -81,15 +132,34 @@
     - name: install_netframework
       args:
         - 48
-    - name: install_chocolatey
-    - name: install_python
+
+- name: ws2019-3
+  box: peru/windows-server-2019-standard-x64-eval
+  aliases:
+    - ws2019-3.example.tld
+  guest: windows
+  ip: 10.0.19.13
+  netmask: 255.255.0.0
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: enable_winrm_credssp
+    - name: install_netframework
+      args:
+        - 48
 
 - name: ws2022-1
   box: peru/windows-server-2022-standard-x64-eval
   aliases:
     - ws2022-1.example.tld
   guest: windows
-  ip: 10.0.0.12
+  ip: 10.0.22.11
+  netmask: 255.255.0.0
   provisioners:
     - name: change_admin_pass
       args:
@@ -99,15 +169,14 @@
         - "automata"
         - "Aut0mata!"
     - name: enable_winrm_credssp
-    - name: install_chocolatey
-    - name: install_python
 
 - name: ws2022-2
   box: peru/windows-server-2022-standard-x64-eval
   aliases:
     - ws2022-2.example.tld
   guest: windows
-  ip: 10.0.0.13
+  ip: 10.0.22.12
+  netmask: 255.255.0.0
   provisioners:
     - name: change_admin_pass
       args:
@@ -117,5 +186,20 @@
         - "automata"
         - "Aut0mata!"
     - name: enable_winrm_credssp
-    - name: install_chocolatey
-    - name: install_python
+
+- name: ws2022-3
+  box: peru/windows-server-2022-standard-x64-eval
+  aliases:
+    - ws2022-3.example.tld
+  guest: windows
+  ip: 10.0.22.13
+  netmask: 255.255.0.0
+  provisioners:
+    - name: change_admin_pass
+      args:
+        - "P4ssword!"
+    - name: create_admin_user
+      args:
+        - "automata"
+        - "Aut0mata!"
+    - name: enable_winrm_credssp

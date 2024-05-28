@@ -1,5 +1,7 @@
 *
 !.gitignore
+!.rubocop.yml
+!Gemfile
 !LICENSE
 !README.md
 !vagrant_extensions/

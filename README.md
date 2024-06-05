@@ -54,6 +54,7 @@ Provisioner arguments must be provided as a list of strings in the order describ
 - `install_chocolatey`: Install [chocolatey](https://chocolatey.org/).
 - `install_netframework`: Install .NET Framework. Args: `version`
 - `install_python`: Install python 3.
+- `optimize_assemblies` : Optimize windows assemblies with the help of the Native Image Generator (NGEN). Args: `filter`
 - `reboot`: Reboot the node.
 
 ## License

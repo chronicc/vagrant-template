@@ -78,6 +78,34 @@ class Windows
       type: 'shell'
   end
 
+  ##
+  # ==== Description
+  #
+  # Optimize windows assemblies with the help of the Native Image Generator (NGEN).
+  # It requires the .NET Framework SDK to be installed.
+  #
+  # ==== Parameters
+  #
+  # * +filter+ [String] A filter to select the assemblies to optimize.
+  #
+  # ==== Example
+  #
+  #   provisioners:
+  #     - name: optimize_assemblies
+  #       args:
+  #         - Microsoft.PowerShell.*
+  #
+  def self.optimize_assemblies(config, filter)
+    config.vm.provision \
+      'optimize_assemblies',
+      args: "-AssemblyFilter #{filter}",
+      path: './vagrant_extensions/optimize_assemblies.ps1',
+      privileged: true,
+      reboot: true,
+      run: 'once',
+      type: 'shell'
+  end
+
   def self.reboot(config)
     config.vm.provision \
       'reboot',

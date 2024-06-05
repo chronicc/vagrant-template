@@ -20,6 +20,14 @@
   box: almalinux/9
   aliases:
     - al9-2.example.tld
+- name: cos8-1
+  box: generic/centos8
+  aliases:
+    - cos8-1.example.tld
+- name: cos8-2
+  box: generic/centos8
+  aliases:
+    - cos8-2.example.tld
 - name: us2004-1
   box: generic/ubuntu2004
   aliases:

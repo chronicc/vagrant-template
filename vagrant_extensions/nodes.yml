@@ -120,6 +120,9 @@
     - name: install_netframework
       args:
         - 48
+    - name: optimize_assemblies
+      args:
+        - Microsoft.PowerShell.*
 
 - name: ws2019-2
   box: peru/windows-server-2019-standard-x64-eval
@@ -140,6 +143,9 @@
     - name: install_netframework
       args:
         - 48
+    - name: optimize_assemblies
+      args:
+        - Microsoft.PowerShell.*
 
 - name: ws2019-3
   box: peru/windows-server-2019-standard-x64-eval
@@ -160,6 +166,9 @@
     - name: install_netframework
       args:
         - 48
+    - name: optimize_assemblies
+      args:
+        - Microsoft.PowerShell.*
 
 - name: ws2022-1
   box: peru/windows-server-2022-standard-x64-eval
@@ -177,6 +186,9 @@
         - "automata"
         - "Aut0mata!"
     - name: enable_winrm_credssp
+    - name: optimize_assemblies
+      args:
+        - Microsoft.PowerShell.*
 
 - name: ws2022-2
   box: peru/windows-server-2022-standard-x64-eval
@@ -194,6 +206,9 @@
         - "automata"
         - "Aut0mata!"
     - name: enable_winrm_credssp
+    - name: optimize_assemblies
+      args:
+        - Microsoft.PowerShell.*
 
 - name: ws2022-3
   box: peru/windows-server-2022-standard-x64-eval
@@ -211,3 +226,6 @@
         - "automata"
         - "Aut0mata!"
     - name: enable_winrm_credssp
+    - name: optimize_assemblies
+      args:
+        - Microsoft.PowerShell.*

@@ -44,6 +44,14 @@
   box: generic/ubuntu2204
   aliases:
     - us2204-2.example.tld
+- name: us2404-1
+  box: bento/ubuntu-24.04
+  aliases:
+    - us2404-1.example.tld
+- name: us2404-2
+  box: bento/ubuntu-24.04
+  aliases:
+    - us2404-2.example.tld
 
 # ---------------------------------------------------------------------------------------
 #

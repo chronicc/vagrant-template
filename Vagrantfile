@@ -35,7 +35,11 @@ def configure_common(node_config, node)
   node_config.vm.box = node['box']
   node_config.vm.box_version = node['version']
   node_config.vm.hostname = (node['hostname'] || node['name'])
-  node_config.vm.network 'private_network', ip: node['ip'], netmask: node['netmask']
+  if node.include? 'ip'
+    node_config.vm.network 'private_network', ip: node['ip'], netmask: node['netmask']
+  else
+    node_config.vm.network 'private_network', type: 'dhcp'
+  end
   node_config.hostmanager.aliases = node['aliases']
 end
 
